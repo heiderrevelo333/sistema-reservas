@@ -1,0 +1,29 @@
+CREATE DATABASE IF NOT EXISTS sistema_reservas;
+USE sistema_reservas;
+
+CREATE TABLE IF NOT EXISTS usuario (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  telefono VARCHAR(20) UNIQUE NOT NULL,
+  rol VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cancha (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  tipo VARCHAR(20) NOT NULL,
+  ubicacion VARCHAR(150),
+  estado VARCHAR(10) DEFAULT 'activa'
+);
+
+CREATE TABLE IF NOT EXISTS reserva (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  fecha DATE NOT NULL,
+  hora_inicio TIME NOT NULL,
+  hora_fin TIME NOT NULL,
+  estado VARCHAR(20) DEFAULT 'pendiente',
+  usuario_id INT,
+  cancha_id INT,
+  FOREIGN KEY (usuario_id) REFERENCES usuario(id) ON DELETE SET NULL,
+  FOREIGN KEY (cancha_id) REFERENCES cancha(id) ON DELETE SET NULL
+);

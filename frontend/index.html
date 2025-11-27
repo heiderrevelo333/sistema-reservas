@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Sistema Reservas - Frontend</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Sistema Reservas - Frontend</h1>
+  <div id="app">
+    <section>
+      <h2>Canchas</h2>
+      <button id="loadCanchas">Cargar canchas</button>
+      <ul id="canchasList"></ul>
+      <h3>Crear cancha</h3>
+      <form id="formCancha">
+        <input name="nombre" placeholder="Nombre" required />
+        <input name="tipo" placeholder="Tipo" required />
+        <input name="ubicacion" placeholder="Ubicación" />
+        <button type="submit">Crear</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Usuarios</h2>
+      <button id="loadUsuarios">Cargar usuarios</button>
+      <ul id="usuariosList"></ul>
+      <h3>Crear usuario</h3>
+      <form id="formUsuario">
+        <input name="nombre" placeholder="Nombre" required />
+        <input name="telefono" placeholder="Teléfono" required />
+        <input name="rol" placeholder="Rol" value="jugador" required />
+        <button type="submit">Crear</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Reservas</h2>
+      <button id="loadReservas">Cargar reservas</button>
+      <ul id="reservasList"></ul>
+      <h3>Crear reserva</h3>
+      <form id="formReserva">
+        <input name="fecha" type="date" required />
+        <input name="hora_inicio" type="time" required />
+        <input name="hora_fin" type="time" required />
+        <input name="usuario_id" type="number" placeholder="Usuario ID" required />
+        <input name="cancha_id" type="number" placeholder="Cancha ID" required />
+        <button type="submit">Crear</button>
+      </form>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

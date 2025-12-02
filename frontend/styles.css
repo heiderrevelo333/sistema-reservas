@@ -1,5 +1,122 @@
-body { font-family: Arial, sans-serif; margin: 20px; }
-h1 { color: #2b6cb0; }
-section { border: 1px solid #ddd; padding: 10px; margin-bottom: 12px; border-radius: 6px; }
-form input { margin: 4px; padding: 6px; }
-button { padding: 6px 10px; cursor: pointer; }
+/* ======= ESTILOS GENERALES ======= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f7fa;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    background: #2c3e50;
+    color: white;
+    margin: 0;
+}
+
+#app {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+/* ======= SECCIONES ======= */
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+section:hover {
+    transform: translateY(-3px);
+}
+
+section h2 {
+    color: #34495e;
+    margin-top: 0;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+/* ======= LISTAS ======= */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #ecf0f1;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+ul li:hover {
+    background: #dfe6e9;
+}
+
+/* ======= BOTONES PEQUEÑOS Y USABLES ======= */
+button {
+    padding: 7px 12px;
+    /* Más pequeño */
+    border: none;
+    border-radius: 6px;
+    /* Menos redondeado */
+    background: #3498db;
+    color: white;
+    font-size: 14px;
+    /* Tamaño más cómodo */
+    cursor: pointer;
+    margin: 4px 0;
+    transition: background 0.2s, transform 0.15s;
+}
+
+button:hover {
+    background: #2980b9;
+    transform: translateY(-1px);
+    /* Animación más sutil */
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* ======= FORMULARIOS ======= */
+form {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 8px;
+}
+
+form input {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #bdc3c7;
+    font-size: 14px;
+}
+
+form button {
+    grid-column: span 2;
+    justify-self: start;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 600px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    form button {
+        grid-column: 1;
+    }
+}

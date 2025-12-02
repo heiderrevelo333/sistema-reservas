@@ -7,11 +7,16 @@
 </head>
 <body>
   <h1>Sistema Reservas - Frontend</h1>
+
   <div id="app">
+
+    <!-- ==================== CANCHAS ==================== -->
     <section>
       <h2>Canchas</h2>
+
       <button id="loadCanchas">Cargar canchas</button>
       <ul id="canchasList"></ul>
+
       <h3>Crear cancha</h3>
       <form id="formCancha">
         <input name="nombre" placeholder="Nombre" required />
@@ -19,12 +24,30 @@
         <input name="ubicacion" placeholder="Ubicación" />
         <button type="submit">Crear</button>
       </form>
+
+      <h3>Actualizar cancha</h3>
+      <form id="formUpdateCancha">
+        <input name="id" type="number" placeholder="ID de cancha" required />
+        <input name="nombre" placeholder="Nuevo nombre" />
+        <input name="tipo" placeholder="Nuevo tipo" />
+        <input name="ubicacion" placeholder="Nueva ubicación" />
+        <button type="submit">Actualizar</button>
+      </form>
+
+      <h3>Eliminar cancha</h3>
+      <form id="formDeleteCancha">
+        <input name="id" type="number" placeholder="ID de cancha" required />
+        <button type="submit">Eliminar</button>
+      </form>
     </section>
 
+    <!-- ==================== USUARIOS ==================== -->
     <section>
       <h2>Usuarios</h2>
+
       <button id="loadUsuarios">Cargar usuarios</button>
       <ul id="usuariosList"></ul>
+
       <h3>Crear usuario</h3>
       <form id="formUsuario">
         <input name="nombre" placeholder="Nombre" required />
@@ -32,12 +55,30 @@
         <input name="rol" placeholder="Rol" value="jugador" required />
         <button type="submit">Crear</button>
       </form>
+
+      <h3>Actualizar usuario</h3>
+      <form id="formUpdateUsuario">
+        <input name="id" type="number" placeholder="ID de usuario" required />
+        <input name="nombre" placeholder="Nuevo nombre" />
+        <input name="telefono" placeholder="Nuevo teléfono" />
+        <input name="rol" placeholder="Nuevo rol" />
+        <button type="submit">Actualizar</button>
+      </form>
+
+      <h3>Eliminar usuario</h3>
+      <form id="formDeleteUsuario">
+        <input name="id" type="number" placeholder="ID de usuario" required />
+        <button type="submit">Eliminar</button>
+      </form>
     </section>
 
+    <!-- ==================== RESERVAS ==================== -->
     <section>
       <h2>Reservas</h2>
+
       <button id="loadReservas">Cargar reservas</button>
       <ul id="reservasList"></ul>
+
       <h3>Crear reserva</h3>
       <form id="formReserva">
         <input name="fecha" type="date" required />
@@ -47,8 +88,27 @@
         <input name="cancha_id" type="number" placeholder="Cancha ID" required />
         <button type="submit">Crear</button>
       </form>
+
+      <h3>Actualizar reserva</h3>
+      <form id="formUpdateReserva">
+        <input name="id" type="number" placeholder="ID de reserva" required />
+        <input name="fecha" type="date" />
+        <input name="hora_inicio" type="time" />
+        <input name="hora_fin" type="time" />
+        <input name="usuario_id" type="number" placeholder="Nuevo Usuario ID" />
+        <input name="cancha_id" type="number" placeholder="Nuevo Cancha ID" />
+        <button type="submit">Actualizar</button>
+      </form>
+
+      <h3>Eliminar reserva</h3>
+      <form id="formDeleteReserva">
+        <input name="id" type="number" placeholder="ID de reserva" required />
+        <button type="submit">Eliminar</button>
+      </form>
     </section>
+
   </div>
+
   <script src="app.js"></script>
 </body>
 </html>
